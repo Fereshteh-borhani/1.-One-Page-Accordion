@@ -1,0 +1,71 @@
+.title {
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #5e37a3;
+}
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tabLabel {
+  order: 1;
+  display: block;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  background: #9066e8;
+  color: #1d1e35;
+  font-weight: bold;
+  transition: background ease 0.2s;
+  text-transform: capitalize;
+}
+.tabs .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 3rem;
+  background: #fff;
+}
+.tab h2 {
+  font-size: 1.5rem;
+  font-weight: 601;
+  line-height: 1.5;
+  margin-bottom: 19px;
+  text-transform: capitalize;
+}
+
+.tab p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: justify;
+  text-indent: 20px;
+  word-spacing: -1px;
+}
+
+.tabInput {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  background: #fff;
+}
+input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .tabs .tab,
+  .tabLabel {
+    order: initial;
+  }
+  .tabs .tab {
+    padding: 0 2rem;
+  }
+  .tabLabel {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
